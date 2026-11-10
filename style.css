@@ -1,0 +1,254 @@
+:root {
+  --primary: #b53232;
+  --accent: #ffbb00;
+  --white: #ffffff;
+  --text: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "changa one", serif;
+  color: var(--text);
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 998;
+  position: fixed;
+  font-family: castono, serif;
+}
+.navbar .navbar-logo {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 2.5rem;
+  color: var(--white);
+  font-family:
+    changa one,
+    serif;
+}
+.navbar .navbar-logo span {
+  color: var(--accent);
+}
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar .navbar-nav a {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+  padding: 8rem 7% 3rem;
+  overflow: hidden;
+  background-color: #2b1a14;
+  color: #ffffff;
+}
+.hero .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  z-index: 2;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 520px;
+}
+.hero .hero-content h1 {
+  font-family: "Changa One", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.hero .hero-content h1 span {
+  color: var(--accent);
+}
+.hero .hero-content h2 {
+  font-family: "Changa One", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  width: max-content;
+  max-width: none;
+}
+.hero .hero-content p {
+  font-family: "Castoro", serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--white);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Menu */
+.menu {
+  padding: 8rem 7% 10rem;
+  text-align: center;
+  background-color: var(--white);
+}
+.menu .menu-title {
+  font-family: "changa one", cursive;
+  font-size: 3rem;
+  color: #b53232;
+  margin-bottom: 0.2rem;
+}
+.menu .menu-desc {
+  font-family: "castoro", serif;
+  font-size: 1.25rem;
+  color: black;
+  max-width: 750px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+.menu .menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto 0;
+}
+.menu .menu-card {
+  background-color: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: 0.3s ease;
+}
+.menu .menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+.menu .menu-card-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.menu .menu-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+.menu .menu-card-name {
+  font-family: "castoro", serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 1rem 1.2rem 0.5rem;
+  color:black;
+}
+.menu .menu-card-price {
+  font-family: "castoro", serif;
+  font-size: 1rem;
+  margin: 0 1.2rem 1.5rem;
+  color: black;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #b53232;
+  color:var(--white);
+  padding: 3rem 5% 1.5rem;
+}
+.footer .footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer .footer-logo {
+  font-family: "Changa One", cursive;
+  font-size: 2.5rem;
+  color: var(--cream);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.footer .footer-logo span {
+  color: var(--accent);
+}
+
+.footer .footer-about p {
+  font-family: "Castoro", serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+.footer .footer-menu h4,
+.footer .footer-contact h4 {
+  font-family: "Castoro", serif;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.footer .footer-menu a {
+  display: block;
+  font-family: "Castoro", serif;
+  font-size: 0.875rem;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+}
+.footer .footer-contact p {
+  font-family: "Castoro", serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
